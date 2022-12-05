@@ -25,3 +25,7 @@
 #endif
 
 #define RETRO_TAPPING
+
+#define ENCODERS_PAD_A { B12 }
+#define ENCODERS_PAD_B { B13 }
+    

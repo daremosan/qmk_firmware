@@ -69,6 +69,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][1] = {
+    [_BASE] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN),
+    [_LOWER] =  { ENCODER_CCW_CW(KC_KB_VOLUME_UP, KC_KB_VOLUME_DOWN),
+    [_RAISE] =  { ENCODER_CCW_CW(RGB_HUD, RGB_HUI),
+    [_ADJUST] = { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD),
+};
+#endif
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case LWR:
